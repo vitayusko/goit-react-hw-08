@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./SearchBox.module.css";
 import { useDispatch } from "react-redux";
-import { changeFilter } from "../../redux/filter/filtersSlice";
+import { changeFilter } from "../../redux/filter/slice";
 
 const SearchBox = () => {
   const dispatch = useDispatch();
