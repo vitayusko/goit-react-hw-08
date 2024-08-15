@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
-import { selectContacts } from "../contact/selector";
+import { selectContacts } from "../contacts/selectors";
 
 export const selectFilter = (state) => state.filter.filter;
 
