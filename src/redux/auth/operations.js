@@ -37,3 +37,12 @@ export const logOutThunk = createAsyncThunk("logOut", async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
+
+// export const getMeThunk = createAsyncThunk("getMe", async (_, thunkAPI) => {
+//   try {
+//     const { data } = await goitAPI.post("/users/current");
+//     return data;
+//   } catch (error) {
+//     return thunkAPI.rejectWithValue(error.message);
+//   }
+// });
