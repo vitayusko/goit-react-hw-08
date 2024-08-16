@@ -1,20 +1,23 @@
 import React from "react";
-import ContactForm from "./ContactForm/ContactForm";
-import ContactList from "./ContactList/ContactList";
-import SearchBox from "./SearchBox/SearchBox";
-import { Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home/Home";
+import Layout from "./Layout";
+import Contacts from "../pages/Contacts/Contacts";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import NotFound from "../pages/NotFound/NotFound";
 
 const App = () => {
   return (
     <main>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
       <Routes>
         <Route path="/" element={<Layout />}>
-          {" "}
+          <Route index element={<Home />} />
+          <Route path="contacts" element={<Contacts />} />
         </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </main>
   );
