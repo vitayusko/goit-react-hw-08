@@ -7,11 +7,12 @@ const initialState = {
   },
   token: null,
   isLoggedIn: false,
-  isRefreshing: false,
+  // isRefreshing: false,
 };
 
 const slice = createSlice({
-  name: "user",
+  name: "auth",
   initialState,
-  reducers: {},
 });
+
+export const authReducer = slice.reducer;
