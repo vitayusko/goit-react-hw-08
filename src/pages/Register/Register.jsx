@@ -37,10 +37,10 @@ const Register = () => {
             className={s.input}
           />
           <button type="submit" className={s.btn}>
-            Login
+            Registration
           </button>
           <p>
-            You already have an account <Link to="/login">Sign Up</Link>
+            You already have an account <Link to="/login">Sign In</Link>
           </p>
         </Form>
       </Formik>

@@ -13,3 +13,15 @@ export const registerThunk = createAsyncThunk(
     }
   }
 );
+
+export const loginThunk = createAsyncThunk(
+  "login",
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await goitAPI.post("/users/login", credentials);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

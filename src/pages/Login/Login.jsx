@@ -2,6 +2,8 @@ import { Field, Form, Formik } from "formik";
 import React from "react";
 import s from "./Login.module.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginThunk } from "../../redux/auth/operations";
 
 const Login = () => {
   const initialValues = {
@@ -9,7 +11,9 @@ const Login = () => {
     password: "",
   };
 
+  const dispatch = useDispatch();
   const handleSubmit = (values, options) => {
+    dispatch(loginThunk(values));
     console.log(values);
     options.resetForm();
   };
@@ -31,7 +35,7 @@ const Login = () => {
             Login
           </button>
           <p>
-            You don't have an account? <Link to="/register">Register</Link>
+            You don't have an account? <Link to="/register">Sign Up</Link>
           </p>
         </Form>
       </Formik>
