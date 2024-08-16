@@ -1,11 +1,13 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import s from "./Login.module.css";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { Link, Navigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { loginThunk } from "../../redux/auth/operations";
+import { selectLoggedIn } from "../../redux/auth/selectors";
 
 const Login = () => {
+  const isLoggedIn = useSelector(selectLoggedIn);
   const initialValues = {
     email: "",
     password: "",
@@ -17,6 +19,9 @@ const Login = () => {
     console.log(values);
     options.resetForm();
   };
+  if (isLoggedIn) {
+    return <Navigate to="/" />;
+  } //redirect
   return (
     <div>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
