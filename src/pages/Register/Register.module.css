@@ -12,7 +12,7 @@
 
 .btn {
   display: inline-flex;
-  padding: 16px 32px;
+  padding: 10px 32px;
   align-items: flex-start;
   gap: 10px;
   border-radius: 4px;
@@ -26,4 +26,22 @@
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.welcomeText {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #4d5ae5;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
 }
