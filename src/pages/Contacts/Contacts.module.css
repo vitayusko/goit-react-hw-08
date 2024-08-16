@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Стекать компоненты по вертикали */
+  align-items: center; /* Центрировать по горизонтали */
+  justify-content: center; /* Центрировать по вертикали */
+  max-width: 50vh;
+  min-height: 50vh; /* Занимает всю высоту экрана */
+  padding: 20px; /* Отступы от края экрана */
+  gap: 20px; /* Отступы между компонентами */
+}

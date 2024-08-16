@@ -1,10 +1,11 @@
 import React from "react";
 // import ContactList from "../../components/ContactList/ContactList";
 import Contacts from "../Contacts/Contacts";
+import s from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className={s.wrapper}>
       <Contacts />
     </div>
   );
