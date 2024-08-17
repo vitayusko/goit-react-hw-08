@@ -14,12 +14,15 @@ import { selectIsRefreshing } from "../redux/auth/selectors";
 
 const App = () => {
   const dispatch = useDispatch();
-  // const isRefreshing = useSelector(selectIsRefreshing);
+  const isRefreshing = useSelector(selectIsRefreshing);
+  // useEffect(() => {
+  //   dispatch(getMeThunk()), [dispatch];
+  // });
   useEffect(() => {
-    dispatch(getMeThunk()), [dispatch];
-  });
-  // return isRefreshing ? null : (
-  return (
+    dispatch(getMeThunk());
+  }, [dispatch]);
+
+  return isRefreshing ? null : (
     <main>
       <Routes>
         <Route path="/" element={<Layout />}>
