@@ -1,0 +1,88 @@
+.wrapper {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 25px 156px;
+  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  justify-content: space-between; /* Распределяет элементы по краям */
+}
+
+.nav {
+  display: flex;
+  width: 100%; /* Занимает всю ширину родительского элемента */
+  justify-content: space-between; /* Распределяет элементы по краям */
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.link {
+  color: var(--NAVY-BLUE, #2e2f42);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+.active {
+  color: var(--OCEAN, #404bbf);
+}
+
+.navItems {
+  list-style: none;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 5px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  background: var(--IRIS, #e54d61);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  color: var(--WHITE, #fff);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+
+.welcomeText {
+  margin: 0; /* Remove default margin for <h3> */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  color: var(--OCEAN, #404bbf);
+}
+
+li {
+  display: flex;
+  align-items: center;
+}

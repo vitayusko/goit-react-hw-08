@@ -23,7 +23,7 @@ const Login = () => {
     return <Navigate to="/" />;
   } //redirect
   return (
-    <div>
+    <div className={s.wrapper}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className={s.form}>
           <Field

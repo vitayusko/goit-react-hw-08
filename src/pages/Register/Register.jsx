@@ -18,7 +18,7 @@ const Register = () => {
     options.resetForm();
   };
   return (
-    <div>
+    <div className={s.wrapper}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className={s.form}>
           <Field

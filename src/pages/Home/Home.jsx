@@ -6,7 +6,7 @@ import s from "./Home.module.css";
 const Home = () => {
   return (
     <div className={s.wrapper}>
-      <Contacts />
+      <h1>Welcome to your contacts book!</h1>
     </div>
   );
 };

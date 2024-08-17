@@ -7,7 +7,7 @@ const SearchBox = () => {
   const dispatch = useDispatch();
   return (
     <div className={s.searchBox}>
-      <p>Find contacts by name</p>
+      <p className={s.text}>Find contacts by name</p>
       <input
         onChange={(e) => dispatch(changeFilter(e.target.value))}
         placeholder="Search contacts..."

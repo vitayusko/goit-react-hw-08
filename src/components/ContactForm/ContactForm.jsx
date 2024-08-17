@@ -24,16 +24,18 @@ const ContactForm = () => {
       <Formik initialValues={initialValues} onSubmit={onSubmit}>
         <Form className={s.form}>
           <label className={s.label}>
-            <span>Name:</span>
+            <span className={s.text}>Name:</span>
             <Field className={s.input} name="name" />
             <ErrorMessage name="name" component="span" className={s.error} />
           </label>
           <label className={s.label}>
-            <span>Number:</span>
+            <span className={s.text}>Number:</span>
             <Field className={s.input} name="number" />
             <ErrorMessage name="number" component="span" className={s.error} />
           </label>
-          <button type="submit">Create</button>
+          <button type="submit" className={s.btn}>
+            Create
+          </button>
         </Form>
       </Formik>
     </div>
