@@ -4,6 +4,7 @@ import {
   deleteContactThunk,
   fetchContactsThunk,
 } from "./operations";
+import { logOutThunk } from "../auth/operations";
 
 const initialState = {
   items: [],
@@ -33,6 +34,10 @@ const slice = createSlice({
       })
       .addCase(addContactThunk.fulfilled, (state, action) => {
         state.items.push(action.payload);
+      })
+      .addCase(logOutThunk.fulfilled, (state) => {
+        state.items = [];
+        state.error = null;
       });
   },
 });
